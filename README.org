@@ -1,0 +1,41 @@
+This theme is currently made for dark mode, light mode is not yet customized.
+
+* Dark Mode
+
+[[file:img/wasp-dark-2020-10-22.png]]
+
+* Installation
+
+** Download the theme
+
+there are two ways to do it:
+
+1. git clone (preferred way)
+
+2. download zip 
+	1. click on the upper right botton that says "code"
+	2. click on download zip
+	3. Extract the zip folder
+
+---
+* Set-Up
+
+Once you have the downloaded folder, follow these steps
+
+1. Go to obsidian > settings > Plugin > Enable "Custom CSS"
+2. Copy the `obsidian.css` file from this folder
+3. Paste it into your obsidian vault (vault = folder)
+
+---
+
+If you already have an obsidian.css file, delete that one, and copy paste this one instead.
+
+you can only have one obsidian.css file at the time.
+
+If you already had one, it's probably from the community themes.
+
+You can always bring back other themes, by installing them from the community themes.
+
+Just keep in mind that you'll have to repeat the process to install this theme again.
+
+Done.
