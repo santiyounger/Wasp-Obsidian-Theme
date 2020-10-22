@@ -22,10 +22,6 @@ there are two ways to do it:
 	2. click on download zip
 	3. Extract the zip folder
 
-___     
-
----
-
 * Set-Up
 
 Once you have the downloaded folder, follow these steps
@@ -34,7 +30,6 @@ Once you have the downloaded folder, follow these steps
 2. Copy the `obsidian.css` file from this folder
 3. Paste it into your obsidian vault (vault = folder)
 
----
 
 If you already have an obsidian.css file, delete that one, and copy paste this one instead.
 
