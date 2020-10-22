@@ -1,8 +1,13 @@
 This theme is currently made for dark mode, light mode is not yet customized.
 
 * Dark Mode
-
 [[file:img/wasp-dark-2020-10-22.png]]
+
+* Table of Contents                                                     :TOC:
+- [[#dark-mode][Dark Mode]]
+- [[#installation][Installation]]
+  - [[#download-the-theme][Download the theme]]
+- [[#set-up][Set-Up]]
 
 * Installation
 
@@ -17,7 +22,10 @@ there are two ways to do it:
 	2. click on download zip
 	3. Extract the zip folder
 
+___     
+
 ---
+
 * Set-Up
 
 Once you have the downloaded folder, follow these steps
