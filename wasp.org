@@ -1362,11 +1362,8 @@ I can change the color with ~color:~
   .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-header {
   display:none;
   }
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-header {
-  display: none;
-  }
   /* heading 1 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-1::before {
+  .CodeMirror-code >  :first-child:not(.CodeMirror-activeline) .cm-header-1::before {
   margin-right: 8px;
   content: "◉";
   color: #f8c537;
