@@ -1,6 +1,82 @@
 # -*- org-confirm-babel-evaluate: nil -*-
   #+title: Obsidian theme Wasp
-  #+PROPERTY: header-args:elisp :tangle ~/Dropbox/obsidian/obsidian-personal/obsidian.css :exports code :noweb yes
+ #+PROPERTY: header-args:elisp :tangle ~/Dropbox/notes/obsidian/obsidian-personal/.obsidian/themes/Wasp.css :exports code :noweb yes
+* Table Of Contents                                                     :TOC:
+- [[#palette-dark-mode][Palette Dark Mode]]
+- [[#wasp-github-theme][Wasp Github Theme]]
+  - [[#info][Info]]
+  - [[#last-update][Last update]]
+  - [[#root-and-fonts][root and fonts]]
+  - [[#theme-dark][Theme Dark]]
+    - [[#highlight-match-dark-theme][highlight match dark theme]]
+  - [[#theme-light][Theme Light]]
+  - [[#heading-sizes][Heading sizes]]
+    - [[#info-1][info]]
+    - [[#heading-in-edit-mode][heading in edit mode]]
+    - [[#headings-preview][Headings Preview]]
+  - [[#font][font]]
+    - [[#info-2][info]]
+    - [[#font-family-and-size][font family and size]]
+  - [[#vim-cursor-color-blink-width][Vim cursor color, blink, width]]
+  - [[#-----end-of-main-theme------][---- end of main theme -----]]
+- [[#-------------personal-extra-hacks-----------------------][------------ personal extra hacks ----------------------]]
+- [[#wasp-primary--everything-else][Wasp Primary / Everything Else]]
+  - [[#tag-pills][tag pills]]
+  - [[#bullet-point-relationship-lines][bullet point relationship lines]]
+  - [[#bullet-color][bullet color]]
+  - [[#image-zoom][image zoom]]
+  - [[#columns-view-for-file-explorer-pane][columns view for file explorer pane]]
+  - [[#arrows-before-links][arrows before links]]
+  - [[#collapsible-sidebar][collapsible sidebar]]
+  - [[#font-1][font]]
+    - [[#info-3][info]]
+    - [[#font-code][font code]]
+    - [[#font-size-how-to-change-font-size][font size (how to change font size)]]
+  - [[#andy-mode-horizontal-mode-v27][andy mode horizontal mode v2.7]]
+  - [[#andy-mode-bonus-half-screen-mode][andy mode bonus half screen mode]]
+  - [[#hide-url][hide URL]]
+  - [[#outline-relationship-lines--for-naviagation][outline relationship lines  for naviagation]]
+  - [[#simple-notion-button][simple notion button]]
+  - [[#backlinks-at-buttom][backlinks at buttom]]
+  - [[#-------------unused-extra--------------------------][------------ unused extra -------------------------]]
+  - [[#tags-in-editing-needs-to-be-together-with-the-one-in-preview][tags in editing (needs to be together with the one in preview)]]
+  - [[#file-explorer-relationship-lines][file explorer relationship lines]]
+  - [[#commenting-out--removing-mark-from-embed][Commenting out / removing mark from embed]]
+  - [[#remove-yaml-front-matter-from-embed][Remove Yaml Front Matter from embed]]
+  - [[#tags-boxes][tags boxes]]
+  - [[#bigger-pop-up-previews][Bigger Pop up previews]]
+  - [[#stylish-quotes][stylish quotes]]
+  - [[#naked-embed][Naked Embed]]
+  - [[#enlarge-image-on-hover][Enlarge image on hover]]
+  - [[#justification][justification]]
+  - [[#andy-vertical-mode][andy vertical mode]]
+  - [[#andy-mode-upright][andy mode upright]]
+  - [[#focus-mode][focus mode]]
+  - [[#justify][justify]]
+  - [[#bullet-point-lines][bullet point lines]]
+  - [[#block-cursor][Block cursor]]
+  - [[#block-cursor-color-plus-line][Block Cursor color plus line]]
+  - [[#outlines-for-outline-draft][outlines for outline draft]]
+  - [[#------------clutter-free--------------------][----------- clutter free -------------------]]
+  - [[#clutter-free-links][clutter free links]]
+  - [[#clutter-free-edit-simple][clutter free edit simple]]
+  - [[#full-clutter-free-mode][full clutter free mode]]
+  - [[#clutter-free-checkbox][clutter free checkbox]]
+- [[#my-own-custom----][my own custom ---]]
+  - [[#org-sidian-project][org-sidian project]]
+    - [[#org-sidian-bullets][org-sidian bullets]]
+    - [[#org-sidian-bullets-color][org-sidian bullets color]]
+    - [[#org-sidian-preview--heading-sizes][org-sidian preview + heading sizes]]
+  - [[#heading--color][heading # color]]
+  - [[#link-pills-sy][link pills SY]]
+  - [[#changing-internal-link-styles][changing internal link styles]]
+  - [[#small-headings][small headings]]
+  - [[#---------inactive-----------------][-------- inactive ----------------]]
+  - [[#heading-color-v2][heading color v2]]
+  - [[#heading-modification][heading modification]]
+  - [[#heading-into-symbol-test][heading into symbol test]]
+  - [[#link-pills-personal-attempt][link pills personal attempt]]
+
 * Palette Dark Mode
   
 | hex palette |
@@ -198,9 +274,10 @@
    my post got me the answer [[https://forum.obsidian.md/t/how-to-change-block-cursor-color-vim-mode/7429/6][How to Change Block Cursor Color]] 
    block cursor width [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/11?u=santi][forum my response]] 
    remove blink [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/4?u=santi][forum remove blink vim mode cursor]] 
+   previous color: #640211
    #+BEGIN_SRC elisp 
      .cm-fat-cursor .CodeMirror-cursor {
-     background-color: #640211 !important;
+     background-color: #ffffff !important;
      opacity: 80% !important;
      width: 9px !important; 
      visibility: visible !important
@@ -617,7 +694,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-string.cm-url:not(.cm-for
 }
 
 #+END_SRC    
-** bullet point relationship lines  for naviagation
+** outline relationship lines  for naviagation
 #+BEGIN_SRC elisp
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Relationship lines for the folder levels in file navigation: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/112
@@ -707,25 +784,50 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-string.cm-url:not(.cm-for
  /* -------------------------------------------------------------- */
  #+END_SRC 
 
-** outlines for outline
-[[https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/116?u=santi][Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum]] 
-modified by sy
+** tags in editing (needs to be together with the one in preview)
+[[https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/64?u=santi][Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum]]
 #+BEGIN_SRC css
-  /* outliner for the outline */
-  .outline-heading-children{
-    border-left: 1px solid #ff0000;
-    border-radius:0 0px 0px 0;
-    transition:all 0.5s ease-in-out;
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end:before {
+    content: '#';
+}
+.tag, div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag-end {
+  background-color: var(--text-accent);
+  border: none;
+  color: white !important;
+  font-size: 11px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+  .tag:hover {
+  color: white;
+  background-color: var(--text-accent-hover);
   }
-  .outline-heading-children:hover{
-    border-left-color:#fff;
+  .tag[href^="#obsidian"] {
+    background-color: #4d3ca6;
   }
-  /* outliner for the file and folders */
-  .nav-folder,.nav-file{
-    margin:0 !important;
-  border-left: 1px solid #fff;
+  .tag[href^="#important"] {
+    background-color: red;
   }
-
+  .tag[href^="#complete"] {
+    background-color: green;
+  }
+  .tag[href^="#inprogress"] {
+    background-color: orange;
+  }
+#+END_SRC 
+   
+** file explorer relationship lines
+ [[https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/137?u=santi][Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum]] 
+#+BEGIN_SRC css
+.nav-folder,.nav-file{
+  margin:0 !important;
+  border-left: 1px solid red;
+}
 #+END_SRC    
 ** Commenting out / removing mark from embed 
  #+BEGIN_SRC css
@@ -1111,6 +1213,26 @@ modified by sy
 
  #+END_SRC 
 
+** outlines for outline draft
+[[https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/116?u=santi][Meta Post - Common CSS Hacks - Share & showcase - Obsidian Forum]] 
+modified by sy
+#+BEGIN_SRC css
+  /* outliner for the outline */
+  .outline-heading-children{
+    border-left: 1px solid #ff0000;
+    border-radius:0 0px 0px 0;
+    transition:all 0.5s ease-in-out;
+  }
+  .outline-heading-children:hover{
+    border-left-color:#fff;
+  }
+  /* outliner for the file and folders */
+  .nav-folder,.nav-file{
+    margin:0 !important;
+  border-left: 1px solid #fff;
+  }
+
+#+END_SRC    
 ** ----------- clutter free -------------------
 ** clutter free links
  #+BEGIN_SRC css 
@@ -1346,73 +1468,225 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 }
 
 #+END_SRC    
-* my own custom
-** org-sidian bullets heading symbol change
-   Inspired on the code by:
-  [[https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/14?u=santi][Hide or Truncate URLs in Editor using CSS? - custom-css - Obsidian Forum]] 
-◉
-○
-✸
-✿
-#TODO:2.5 Change size of symbol 3
-@org-sidian
+* my own custom ---
+** org-sidian project
+*** org-sidian bullets
+ ◉
+ ○
+ ✸
+ ✿
+ I can change the color with ~color:~
+ #+BEGIN_SRC css
+   /* org-sidian bullets heading symbol change */
+   /* updated */
+   /* 2020-11-05 09:46 */
 
-I can change the color with ~color:~
-#+BEGIN_SRC elisp
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-header {
-  display:none;
-  }
-  /* heading 1 */
-  .CodeMirror-code >  :first-child:not(.CodeMirror-activeline) .cm-header-1::before {
-  margin-right: 8px;
-  content: "◉";
-  color: #f8c537;
-  }
-  /* heading 2 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-2::before {
-  margin-left: 10px;
-  margin-right: 8px;
-  content: "○";
-  color: #ff3333;
-  }
-  /* heading 3 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-3::before {
-  margin-left: 20px;
-  margin-right: 8px;
-  content: "✸";
-  color: #f8c537;
-  }
-  /* heading 4 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-4::before {
-  margin-left: 30px;
-  margin-right: 8px;
-  content: "◉";
-  color: #ff3333;
-  }
-  /* heading 5 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-5::before {
-  margin-left: 40px;
-  margin-right: 8px;
-  content: "○";
-  color: #f8c537;
-  }
-  /* heading 6 */
-  .CodeMirror-code > :not(.CodeMirror-activeline) .cm-header-6::before {
-  margin-left: 50px;
-  margin-right: 8px;
-  content: "✸";
-  color: #ff3333;
-  }
-#+END_SRC    
-** changing internal link styles 
-   #+BEGIN_SRC elisp
-      .cm-hmd-internal-link
-      {
-      color: var(--text-a) !important;
-      text-decoration: none !important;
-      }
- #+END_SRC 
-** heading color
+   .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-header {
+       display:none;
+   }
+   /* heading 1 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-1::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-right: 8px;
+       content: "◉";
+   }
+   /* heading 2 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-2::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 10px;
+       margin-right: 8px;
+       content: "○";
+   }
+   /* heading 3 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-3::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 20px;
+       margin-right: 8px;
+       content: "✸";
+   }
+   /* heading 4 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-4::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 30px;
+       margin-right: 8px;
+       content: "◉";
+   }
+   /* heading 5 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-5::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 40px;
+       margin-right: 8px;
+       content: "○";
+   }
+   /* heading 6 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-6::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 50px;
+       margin-right: 8px;
+       content: "✸";
+   }
+ #+END_SRC    
+*** org-sidian bullets color
+    Inspired on the code by:
+   [[https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/14?u=santi][Hide or Truncate URLs in Editor using CSS? - custom-css - Obsidian Forum]] 
+ ◉
+ ○
+ ✸
+ ✿
+ #DONE:15 Change size of symbol 3 <!-- completed:2020-10-30T16:27:36.672Z -->
+ @org-sidian
+
+ I can change the color with ~color:~
+ #+BEGIN_SRC elisp
+   /* org-sidian bullets heading symbol change */
+   /* colored bullets */
+   /* updated */
+   /* 2020-11-05 09:46 */
+
+   .CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-header {
+       display:none;
+   }
+   /* heading 1 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-1::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-right: 8px;
+       color: #f8c537;
+       content: "◉";
+   }
+   /* heading 2 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-2::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 10px;
+       margin-right: 8px;
+       content: "○";
+       color: #ff3333;
+   }
+   /* heading 3 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-3::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 20px;
+       margin-right: 8px;
+       content: "✸";
+       color: #f8c537;
+   }
+   /* heading 4 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-4::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 30px;
+       margin-right: 8px;
+       content: "◉";
+       color: #ff3333;
+   }
+   /* heading 5 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-5::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 40px;
+       margin-right: 8px;
+       content: "○";
+       color: #f8c537;
+   }
+   /* heading 6 */
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-header+.cm-header-6::before,
+   .CodeMirror-code> :not(.CodeMirror-activeline) .cm-header-1:first-child::before {
+       margin-left: 50px;
+       margin-right: 8px;
+       content: "✸";
+       color: #ff3333;
+   }
+ #+END_SRC    
+*** org-sidian preview + heading sizes
+    
+ based on  [[https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/13][forum preview headings]] 
+ ◉
+ ○
+ ✸
+ #+BEGIN_SRC elisp
+   /* This code applies org-sidian to preview mode */
+   /* updated */
+   /* 2020-10-28 10:44 */
+
+   h1:before {
+   margin-right: 8px;
+   content: "◉";
+   font-size: 20px;
+   color: #f8c537;
+   }
+
+   h2:before {
+   margin-left: 10px;
+   margin-right: 8px;
+   content: "⭗";
+   font-size: 14px;
+   color: #ff3333;
+   }
+
+   h3:before {
+   margin-left: 20px;
+   margin-right: 8px;
+   content: "✸";
+   font-size: 16px;
+   color: #f8c537;
+   }
+
+   h4:before {
+   margin-left: 30px;
+   margin-right: 8px;
+   content: "◉";
+   font-size: 20px;
+   color: #ff3333;
+   }
+
+   h5:before {
+   margin-left: 40px;
+   margin-right: 8px;
+   content: "⭗";
+   font-size: 14px;
+   color: #f8c537;
+   }
+
+   h6:before {
+   margin-left: 50px;
+   margin-right: 8px;
+   content: "✸";
+   font-size: 16px;
+   color: #ff3333;
+   }
+
+   /* heading size in preview mode (sizes and weights) */
+
+   .markdown-preview-view h1 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+   .markdown-preview-view h2 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+   .markdown-preview-view h3 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+   .markdown-preview-view h4 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+   .markdown-preview-view h5 {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+
+   .markdown-preview-view h6{
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   }
+    #+END_SRC
+** heading # color
    inspired by clutter free edit
   #+BEGIN_SRC css
     span.cm-formatting-header {
@@ -1421,107 +1695,6 @@ I can change the color with ~color:~
     opacity: 50% !important;
     }
  #+END_SRC  
-** small headings
-#+BEGIN_SRC css
-   /* Changing size/color of the header hashtags ## */
-.cm-formatting-header {
-	color: var(--text-faint);
-  font-size: 0.1px;
-}
-
-#+END_SRC 
-
-** org-sidian preview + heading sizes
-based on  [[https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-css/359/13][forum preview headings]] 
-◉
-○
-✸
-#+BEGIN_SRC elisp
-  /* This code applies org-sidian to preview mode */
-  /* updated */
-  /* 2020-10-28 10:44 */
-
-  h1:before {
-  margin-right: 8px;
-  content: "◉";
-  font-size: 20px;
-  color: #f8c537;
-  }
-
-  h2:before {
-  margin-left: 10px;
-  margin-right: 8px;
-  content: "⭗";
-  font-size: 14px;
-  color: #ff3333;
-  }
-
-  h3:before {
-  margin-left: 20px;
-  margin-right: 8px;
-  content: "✸";
-  font-size: 16px;
-  color: #f8c537;
-  }
-
-  h4:before {
-  margin-left: 30px;
-  margin-right: 8px;
-  content: "◉";
-  font-size: 20px;
-  color: #ff3333;
-  }
-
-  h5:before {
-  margin-left: 40px;
-  margin-right: 8px;
-  content: "⭗";
-  font-size: 14px;
-  color: #f8c537;
-  }
-
-  h6:before {
-  margin-left: 50px;
-  margin-right: 8px;
-  content: "✸";
-  font-size: 16px;
-  color: #ff3333;
-  }
-
-  /* heading size in preview mode (sizes and weights) */
-
-  .markdown-preview-view h1 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-  .markdown-preview-view h2 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-  .markdown-preview-view h3 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-  .markdown-preview-view h4 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-  .markdown-preview-view h5 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-
-  .markdown-preview-view h6{
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  }
-   #+END_SRC
 ** link pills SY
   [[https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/13?u=santi][Tag Pills In Forum]] 
   Altered it to make it fit to this theme
@@ -1574,6 +1747,24 @@ based on  [[https://forum.obsidian.md/t/hide-or-truncate-urls-in-editor-using-cs
        }
   #+END_SRC  
  
+** changing internal link styles 
+   #+BEGIN_SRC elisp
+      .cm-hmd-internal-link
+      {
+      color: var(--text-a) !important;
+      text-decoration: none !important;
+      }
+ #+END_SRC 
+** small headings
+#+BEGIN_SRC css
+   /* Changing size/color of the header hashtags ## */
+.cm-formatting-header {
+	color: var(--text-faint);
+  font-size: 0.1px;
+}
+
+#+END_SRC 
+
 ** -------- inactive ----------------
 ** heading color v2
    didin't work 2020-10-28 09:53
@@ -1664,8 +1855,4 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header.cm-pr
        .tag[href^="#inprogress"] {
          background-color: orange;
        }
-  #+END_SRC  
- 
-  
-  
-  
+  #+END_SRC
