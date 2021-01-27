@@ -3,6 +3,10 @@ This theme is currently made for dark mode, light mode is not yet customized.
 * Dark Mode
 [[file:/img/wasp-dark.png]]
 
+* Light Mode
+
+[[file:/img/wasp-light.png]]
+
 * Table of Contents                                                     :TOC:
 - [[#dark-mode][Dark Mode]]
 - [[#installation][Installation]]

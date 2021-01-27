@@ -36,7 +36,7 @@
 ** Last update
    #+BEGIN_SRC elisp
      /* Last Update:
-     2020-10-22 13:35
+2021-01-27 18:29
      ,*/
    #+END_SRC   
 ** root and fonts
@@ -92,22 +92,23 @@
     #+END_SRC
 ** Theme Light
    not currently customized
+ previous background-primary  #e7e7e7;
    #+BEGIN_SRC elisp
      .theme-light
      {
-         --background-primary:         #e7e7e7;
-         --background-primary-alt:     #e7e7e7;
-         --background-secondary:       #e3e3e3; /* thick menu border */
+         --background-primary:         #C4C4C4;
+         --background-primary-alt:     #C4C4C4;
+         --background-secondary:       #C4C4C4; /* thick menu border */
          --background-secondary-alt:   #bebebe; /* ← ↓  corner */
          --text-normal:                #1A2023;
          --text-faint:                 #665c54;
          --text-title-h1:              #D49335;
          --text-title-h2:              #D49335;
-         --text-title-h3:              #458588;
-         --text-title-h4:              #4b6667;
-         --text-title-h5:              #3b4646;
-         --text-link:                  #458588;
-         --text-a-hover:               #458588;
+         --text-title-h3:              #D49335;
+         --text-title-h4:              #D49335;
+         --text-title-h5:              #D49335;
+         --text-link:                  #D49335;
+         --text-a-hover:               #D49335;
          --text-accent-hover:          #D49335;
 /* ^^^ added for hover over bracket internal links */
          --inline-code:                #458588;
@@ -115,7 +116,7 @@
          --pre-code:                   #bebebe;
          /*  --text-highlight-bg:          add if needed */
          --interactive-before:         #a89984;
-         --background-modifier-border: #1bb0b6;
+         --background-modifier-border: #D49335;
          --text-a:                     #961327;
          --interactive-accent:         #961327;
          --text-accent:                #961327;
