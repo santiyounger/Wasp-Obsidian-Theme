@@ -1,7 +1,7 @@
 This theme is currently made for dark mode, light mode is not yet customized.
 
 * Dark Mode
-[[file:img/wasp-dark-2020-10-22.png]]
+[[file:/img/wasp-dark.png]]
 
 * Table of Contents                                                     :TOC:
 - [[#dark-mode][Dark Mode]]
