@@ -1,0 +1,235 @@
+# -*- org-confirm-babel-evaluate: nil -*-
+  #+title: Obsidian theme Wasp
+ #+PROPERTY: header-args:elisp :tangle ~/Dropbox/notes/obsidian/obsidian-personal/.obsidian/themes/Wasp.css :exports code :noweb yes
+* Table Of Contents                                                     :TOC:
+- [[#palette-dark-mode][Palette Dark Mode]]
+- [[#wasp-github-theme][Wasp Github Theme]]
+  - [[#info][Info]]
+  - [[#last-update][Last update]]
+  - [[#root-and-fonts][root and fonts]]
+  - [[#theme-dark][Theme Dark]]
+    - [[#highlight-match-dark-theme][highlight match dark theme]]
+  - [[#theme-light][Theme Light]]
+  - [[#heading-sizes][Heading sizes]]
+    - [[#info-1][info]]
+    - [[#heading-in-edit-mode][heading in edit mode]]
+    - [[#headings-preview][Headings Preview]]
+  - [[#font][font]]
+    - [[#info-2][info]]
+    - [[#font-family-and-size][font family and size]]
+  - [[#vim-cursor-color-blink-width][Vim cursor color, blink, width]]
+  - [[#-----end-of-main-theme------][---- end of main theme -----]]
+
+* Palette Dark Mode
+  
+| hex palette |
+|-------------|
+| #f8c537;    |
+| #640211;    |
+| #242424;    |
+     
+* Wasp Github Theme
+** Info
+   #+BEGIN_SRC elisp
+     /* This Theme is called "Wasp" and Obsidian Theme created by Santi Younger */
+   #+END_SRC 
+** Last update
+   #+BEGIN_SRC elisp
+     /* Last Update:
+2021-01-27 18:29
+     ,*/
+   #+END_SRC   
+** root and fonts
+   #+BEGIN_SRC elisp
+     :root
+     {
+     --font-monospace: "Source Code Pro", monospace;
+     }
+   #+END_SRC 
+** Theme Dark
+   #+BEGIN_SRC elisp
+     .theme-dark
+     {
+     --background-primary:         #242424;
+     --background-primary-alt:     #242424;
+     --background-secondary:       #191919;
+     --background-secondary-alt:   #3D3D3D;
+     --text-normal:                #faf2d6;
+     --text-faint:                 #bdae93;
+     --text-title-h1:              #E0E0E0;
+     --text-title-h2:              #E0E0E0;
+     --text-title-h3:              #E0E0E0;
+     --text-title-h4:              #E0E0E0;
+     --text-title-h5:              #E0E0E0;
+     --text-title-h6:              #E0E0E0;
+     --text-highlight-bg:          #640211;
+     --text-link:                  #83a598; 
+     --text-a-hover:               #83a598; 
+         --text-accent-hover:      #D49335;
+/* ^^^ added for hover over bracket internal links */
+     --inline-code:                #83a598; 
+     --code-block:                 #83a598; 
+     --text-a:                     #f8c537; 
+     --interactive-accent:         #f8c537;
+     --text-accent:                #f8c537; 
+     --text-on-accent:             #fff;
+     --interactive-accent-rgb:     #f8c537; 
+     --vim-cursor:                 #f8c537; 
+     /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
+     --pre-code:                   #;
+     --interactive-before:         #7c6f64;
+     --background-modifier-border: #f8c537;
+     --text-selection:             #640211;
+     }
+   #+END_SRC 
+*** highlight match dark theme
+    this is for ctrl+find
+    #+BEGIN_SRC elisp
+      .theme-dark .cm-s-obsidian span.obsidian-search-match-highlight {
+      color: var(--text-normal);
+      background-color: #483699;
+      }
+    #+END_SRC
+** Theme Light
+   not currently customized
+ previous background-primary  #e7e7e7;
+   #+BEGIN_SRC elisp
+     .theme-light
+     {
+         --background-primary:         #C4C4C4;
+         --background-primary-alt:     #C4C4C4;
+         --background-secondary:       #C4C4C4; /* thick menu border */
+         --background-secondary-alt:   #bebebe; /* ← ↓  corner */
+         --text-normal:                #1A2023;
+         --text-faint:                 #665c54;
+         --text-title-h1:              #D49335;
+         --text-title-h2:              #D49335;
+         --text-title-h3:              #D49335;
+         --text-title-h4:              #D49335;
+         --text-title-h5:              #D49335;
+         --text-link:                  #D49335;
+         --text-a-hover:               #D49335;
+         --text-accent-hover:          #D49335;
+/* ^^^ added for hover over bracket internal links */
+         --inline-code:                #458588;
+         /*  --text-mark:                  add if needed */
+         --pre-code:                   #bebebe;
+         /*  --text-highlight-bg:          add if needed */
+         --interactive-before:         #a89984;
+         --background-modifier-border: #D49335;
+         --text-a:                     #961327;
+         --interactive-accent:         #961327;
+         --text-accent:                #961327;
+         --interactive-accent-rgb:     #961327;
+         --vim-cursor:                 #961327;
+         --text-selection:             #EDC180;
+     }
+   #+END_SRC 
+** Heading sizes
+*** info
+    bases of code taken from 
+    [[https://forum.obsidian.md/t/make-all-headings-same-size-as-lvl4-heading/5962/8][Make all headings same size]] combined with the format of gruvbox theme
+*** heading in edit mode
+    #+BEGIN_SRC elisp 
+      .cm-header-1 {
+      font-size: 18px;
+      color: var(--text-title-h1) !important;
+      }
+
+      .cm-header-2 {
+      font-size: 18px;
+      color: var(--text-title-h2) !important;
+      }
+
+      .cm-header-3 {
+      font-size: 18px;
+      color: var(--text-title-h3) !important;
+      }
+
+      .cm-header-4 {
+      font-size: 18px;
+      color: var(--text-title-h4) !important;
+      }
+
+      .cm-header-5 {
+      font-size: 18px;
+      color: var(--text-title-h5) !important;
+      }
+
+      .cm-header-6 {
+      font-size: 18px;
+      color: --text-normal;
+      color: var(--text-title-h6) !important;
+      }
+    #+END_SRC   
+*** Headings Preview 
+    #+BEGIN_SRC elisp 
+      .markdown-preview-view h1 {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-title-h1) !important;
+      }
+
+      .markdown-preview-view h2 {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-title-h2) !important;
+      }
+
+      .markdown-preview-view h3 {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-title-h3) !important;
+      }
+
+      .markdown-preview-view h4 {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-title-h4) !important;
+      }
+
+      .markdown-preview-view h5 {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-title-h5) !important;
+      }
+
+      .markdown-preview-view h6 {
+      font-size: 20px;
+      line-height: 24px;
+      color: --text-normal;
+      color: var(--text-title-h6) !important;
+      }
+    #+END_SRC
+    #+BEGIN_SRC elisp
+      /*-----------------------------------------*/
+      /* End of main theme, extra functionality can be added below */
+    #+END_SRC
+  
+** font
+*** info
+    [[https://forum.obsidian.md/t/monospace-font-in-the-editor/648/10?u=santi][Monospace Font in the Editor - Obsidian Forum]] 
+    this theme has a good organization of font [[https://github.com/bcdavasconcelos/Obsidian-GDCT_Dark][GitHub - bcdavasconcelos/Obsidian-GDCT_Dark]] 
+
+    this code uses variables that direct to :root
+*** font family and size
+    font's 
+    #+BEGIN_SRC elisp
+      .markdown-source-view { font-family: var(--font-monospace)
+      }
+    #+END_SRC
+** Vim cursor color, blink, width
+   my post got me the answer [[https://forum.obsidian.md/t/how-to-change-block-cursor-color-vim-mode/7429/6][How to Change Block Cursor Color]] 
+   block cursor width [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/11?u=santi][forum my response]] 
+   remove blink [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/4?u=santi][forum remove blink vim mode cursor]] 
+   previous color: #640211
+   #+BEGIN_SRC elisp 
+     .cm-fat-cursor .CodeMirror-cursor {
+     background-color: #f8c537 !important;
+     opacity: 80% !important;
+     width: 9px !important; 
+     visibility: visible !important
+     }
+   #+END_SRC 
+** ---- end of main theme -----
+   
