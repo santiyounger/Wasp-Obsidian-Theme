@@ -1,7 +1,7 @@
      /* This Theme is called "Wasp" and Obsidian Theme created by Santi Younger */
 
      /* Last Update:
-        2021-05-20 21:48
+2021-07-27 14:48
      */
 
      :root
@@ -40,7 +40,7 @@
      --pre-code:                   #;
      --interactive-before:         #7c6f64;
      --background-modifier-border: #f8c537;
-     --text-selection:             #640211;
+     --text-selection:            #f8c537;
      }
 
       .theme-dark .cm-s-obsidian span.obsidian-search-match-highlight {
@@ -50,12 +50,13 @@
 
      .theme-light
      {
-         --background-primary:         #C4C4C4;
-         --background-primary-alt:     #C4C4C4;
-         --background-secondary:       #C4C4C4; /* thick menu border */
-         --background-secondary-alt:   #bebebe; /* ← ↓  corner */
+         --background-primary:         #EDEDED;
+         --background-secondary:       #C4C4C4;
+          /* thick menu border */
+         --background-primary-alt:     #;
+         --background-secondary-alt:   #707070; /* ← ↓  corner */
          --text-normal:                #1A2023;
-         --text-faint:                 #665c54;
+         --text-faint:                 #DEDEDE;
          --text-title-h1:              #D49335;
          --text-title-h2:              #D49335;
          --text-title-h3:              #D49335;
@@ -72,12 +73,39 @@
          --interactive-before:         #a89984;
          --background-modifier-border: #D49335;
          --text-a:                     #961327;
-         --interactive-accent:         #961327;
+         --interactive-accent:         #f8c537;
          --text-accent:                #961327;
          --interactive-accent-rgb:     #961327;
          --vim-cursor:                 #961327;
          --text-selection:             #EDC180;
+         --text-white:                 #ffffff;
      }
+
+.nav-file-title, .nav-folder-title {
+    color: var(--text-normal);
+}
+
+.nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+    background-color: var(--background-modifier-border);
+    color: white;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+    color: var(--text-normal);
+}
+
+.CodeMirror-guttermarker-subtle {
+    color: var(--text-normal) !important;
+}
+
+button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-normal);
+}
+
+.vertical-tab-header-group-title {
+    color: var(--text-white);
+}
 
       .cm-header-1 {
       font-size: 18px;
