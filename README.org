@@ -14,7 +14,7 @@ Wasp **is now available in Obsidian Community Themes.**
 
 In obsidian go to Settings > Appearance > Community Themes > Browse
 
-Search for: Reverie by Santi Younger
+Search for: Wasp by Santi Younger
 
 Click “Use”
 
