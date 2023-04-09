@@ -13,6 +13,7 @@
   - [[#font][font]]
   - [[#vim-cursor-color-blink-width][Vim cursor color, blink, width]]
   - [[#compatibility-with-obsidian-tabs-plugin][Compatibility with Obsidian Tabs plugin]]
+  - [[#horizontal-line-with-bee-emoji][Horizontal Line with Bee Emoji]]
   - [[#-----end-of-main-theme------][---- end of main theme -----]]
 
 * Palette Dark Mode
@@ -344,6 +345,35 @@ border-left-color: transparent!important
 .plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
 border: 0!important;
 border-radius: 0px 0px 0px 0px!important;
+}
+#+END_SRC
+
+** Horizontal Line with Bee Emoji
+#+BEGIN_SRC css
+/** hr styles -- PREVIEW MODE */
+.cm-line hr,
+.markdown-preview-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 0;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
+}
+
+.cm-line hr::after,
+.markdown-preview-view hr::after {
+  content: '\1f41d';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--text-sub-accent);
+  background-color: var(--background-primary);
 }
 #+END_SRC
 ** ---- end of main theme -----
