@@ -1,81 +1,57 @@
 # -*- org-confirm-babel-evaluate: nil -*-
   #+title: Obsidian theme Wasp
- #+PROPERTY: header-args:css :tangle ~/Dropbox/notes/obsidian/obsidian-personal/.obsidian/themes/Wasp.css :exports code :noweb yes
-* Table Of Contents                                                     :TOC:
-- [[#palette-dark-mode][Palette Dark Mode]]
-- [[#wasp-github-theme][Wasp Github Theme]]
-  - [[#info][Info]]
-  - [[#last-update][Last update]]
-  - [[#root-and-fonts][root and fonts]]
-  - [[#theme-dark][Theme Dark]]
-  - [[#theme-light][Theme Light]]
-  - [[#heading-sizes][Heading sizes]]
-  - [[#font][font]]
-  - [[#vim-cursor-color-blink-width][Vim cursor color, blink, width]]
-  - [[#compatibility-with-obsidian-tabs-plugin][Compatibility with Obsidian Tabs plugin]]
-  - [[#-----end-of-main-theme------][---- end of main theme -----]]
+ #+PROPERTY: header-args:css :tangle C:\Users\santi\Documents\SY Notes\Obsidian\santi-2024\.obsidian\snippets\Wasp.css :exports code :noweb yes
 
-* Palette Dark Mode
-  
-| hex palette |
-|-------------|
-| #f8c537;    |
-| #640211;    |
-| #242424;    |
-     
-* Wasp Github Theme
-** Info
+* Info
    #+BEGIN_SRC css
      /* This Theme is called "Wasp" and Obsidian Theme created by Santi Younger */
    #+END_SRC 
-** Last update
-   #+BEGIN_SRC css
-     /* Last Update:
-2021-07-27 14:48
-     ,*/
-   #+END_SRC
-** root and fonts
+* root and fonts
    #+BEGIN_SRC css
      :root
      {
      --font-monospace: "Source Code Pro", monospace;
      }
    #+END_SRC 
-** Theme Dark
+* Theme Dark
    #+BEGIN_SRC css
-     .theme-dark
-     {
-     --background-primary:         #242424;
-     --background-primary-alt:     #242424;
-     --background-secondary:       #191919;
-     --background-secondary-alt:   #3D3D3D;
-     --text-normal:                #faf2d6;
-     --text-faint:                 #bdae93;
-     --text-title-h1:              #E0E0E0;
-     --text-title-h2:              #E0E0E0;
-     --text-title-h3:              #E0E0E0;
-     --text-title-h4:              #E0E0E0;
-     --text-title-h5:              #E0E0E0;
-     --text-title-h6:              #E0E0E0;
-     --text-highlight-bg:          #640211;
-     --text-link:                  #83a598; 
-     --text-a-hover:               #83a598; 
-         --text-accent-hover:      #D49335;
-/* ^^^ added for hover over bracket internal links */
-     --inline-code:                #83a598; 
-     --code-block:                 #83a598; 
-     --text-a:                     #f8c537; 
-     --interactive-accent:         #f8c537;
-     --text-accent:                #f8c537; 
-     --text-on-accent:             #fff;
-     --interactive-accent-rgb:     #f8c537; 
-     --vim-cursor:                 #f8c537; 
-     /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
-     --pre-code:                   #;
-     --interactive-before:         #7c6f64;
-     --background-modifier-border: #f8c537;
-     --text-selection:            #f8c537;
-     }
+          .theme-dark
+          {
+    --button-hover-bg-color: #DAA520; /* Darker Yellow Background for Hover */
+    --button-hover-text-color: #ffffff; /* White Text for Hover */
+          --button-bg-color: #D49335; /* Gray-Black Background */
+          --button-text-color: #242424; /* Light Gray Text */   
+          --background-primary:         #242424;
+          --background-primary-alt:     #242424;
+          --background-secondary:       #191919;
+          --background-secondary-alt:   #3D3D3D;
+          --text-normal:                #faf2d6;
+          --text-faint:                 #bdae93;
+          --text-title-h1:              #E0E0E0;
+          --text-title-h2:              #E0E0E0;
+          --text-title-h3:              #E0E0E0;
+          --text-title-h4:              #E0E0E0;
+          --text-title-h5:              #E0E0E0;
+          --text-title-h6:              #E0E0E0;
+          --text-highlight-bg:          #640211;
+          --text-link:                  #83a598; 
+          --text-a-hover:               #83a598; 
+              --text-accent-hover:      #D49335;
+     /* ^^^ added for hover over bracket internal links */
+          --inline-code:                #83a598; 
+          --code-block:                 #83a598; 
+          --text-a:                     #f8c537; 
+          --interactive-accent:         #f8c537;
+          --text-accent:                #f8c537; 
+          --text-on-accent:             #fff;
+          --interactive-accent-rgb:     #f8c537; 
+          --vim-cursor:                 #f8c537; 
+          /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
+          --pre-code:                   #;
+          --interactive-before:         #7c6f64;
+          --background-modifier-border: #f8c537;
+          --text-selection:            #f8c537;
+          }
    #+END_SRC 
 *** highlight match dark theme
     this is for ctrl+find
@@ -85,7 +61,7 @@
       background-color: #483699;
       }
     #+END_SRC
-** Theme Light
+* Theme Light
    not currently customized
  previous background-primary  #e7e7e7;
    #+BEGIN_SRC css
@@ -190,7 +166,7 @@ button.mod-cta {
         }
    #+end_example
 
-** Heading sizes
+* Heading sizes
 *** info
     bases of code taken from 
     [[https://forum.obsidian.md/t/make-all-headings-same-size-as-lvl4-heading/5962/8][Make all headings same size]] combined with the format of gruvbox theme
@@ -271,7 +247,7 @@ button.mod-cta {
       /* End of main theme, extra functionality can be added below */
     #+END_SRC
   
-** font
+* font
 *** info
     [[https://forum.obsidian.md/t/monospace-font-in-the-editor/648/10?u=santi][Monospace Font in the Editor - Obsidian Forum]] 
     this theme has a good organization of font [[https://github.com/bcdavasconcelos/Obsidian-GDCT_Dark][GitHub - bcdavasconcelos/Obsidian-GDCT_Dark]] 
@@ -283,7 +259,7 @@ button.mod-cta {
       .markdown-source-view { font-family: var(--font-monospace)
       }
     #+END_SRC
-** Vim cursor color, blink, width
+* Vim cursor color, blink, width
    my post got me the answer [[https://forum.obsidian.md/t/how-to-change-block-cursor-color-vim-mode/7429/6][How to Change Block Cursor Color]] 
    block cursor width [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/11?u=santi][forum my response]] 
    remove blink [[https://forum.obsidian.md/t/options-to-modify-cursor-style/1091/4?u=santi][forum remove blink vim mode cursor]] 
@@ -297,7 +273,7 @@ button.mod-cta {
      }
    #+END_SRC
 
-** Compatibility with Obsidian Tabs plugin
+* Compatibility with Obsidian Tabs plugin
 #+BEGIN_SRC css
 .plugin-tabs .stayopen .view-header {
 border-bottom: 2px solid var(--interactive-accent)!important;
@@ -346,4 +322,18 @@ border: 0!important;
 border-radius: 0px 0px 0px 0px!important;
 }
 #+END_SRC
-** ---- end of main theme -----
+* button UI menu was very bad before
+
+#+BEGIN_SRC css
+.vertical-tab-nav-item.is-active, button.mod-cta {
+    background-color: var(--button-bg-color); /* Default background color */
+    color: var(--button-text-color); /* Default text color */
+}
+
+.vertical-tab-nav-item.is-active:hover, button.mod-cta:hover,
+.vertical-tab-nav-item.is-active:focus, button.mod-cta:focus {
+    background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+    color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+}
+#+END_SRC
+
