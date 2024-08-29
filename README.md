@@ -1,18 +1,18 @@
 This theme is currently made for dark mode, light mode is not yet customized.
 
-* Dark Mode
-[[file:/img/wasp-dark.png]]
+## Dark Mode
+![Dark Mode Wasp](./img/wasp-dark.png)
 
-* Light Mode
+## Light Mode
 
-[[file:/img/wasp-light.png]]
+![Dark Mode Wasp](./img/wasp-light.png)
 
-* Installation
-* Set-Up
 
-Wasp **is now available in Obsidian Community Themes.**
+## Installation
 
-In obsidian go to Settings > Appearance > Community Themes > Browse
+Wasp *is available in Obsidian Community Themes.*
+
+In Obsidian go to Settings > Appearance > Community Themes > Browse
 
 Search for: Wasp by Santi Younger
 
@@ -21,4 +21,6 @@ Click “Use”
 If you get a window click “Overwrite”
 
 Done, enjoy!
+
+PS: If you are reading this from Obsidian, ignore the "Installation" instructions since you already know how to do it. It's probably too late now if you've already read this 👆 😂
 
