@@ -1,6 +1,7 @@
 # -*- org-confirm-babel-evaluate: nil -*-
   #+title: Obsidian theme Wasp
  #+PROPERTY: header-args:css :tangle C:\Users\santi\Documents\SY Notes\Obsidian\santi-2024\.obsidian\snippets\Wasp.css :exports code :noweb yes
+ 
 
 * Info
    #+BEGIN_SRC css
@@ -322,18 +323,67 @@ border: 0!important;
 border-radius: 0px 0px 0px 0px!important;
 }
 #+END_SRC
-* button UI menu was very bad before
+* button different color
 
 #+BEGIN_SRC css
-.vertical-tab-nav-item.is-active, button.mod-cta {
-    background-color: var(--button-bg-color); /* Default background color */
-    color: var(--button-text-color); /* Default text color */
+    button.mod-cta {
+        background-color: var(--button-bg-color); /* Uses variable for background color */
+        color: var(--button-text-color); /* Uses variable for text color */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+
+    }
+
+    button.mod-cta:hover, button.mod-cta:focus {
+        background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+        color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    .vertical-tab-nav-item.is-active {
+        background-color: var(--button-bg-color); /* Gray-Black Background */
+        color: var(--button-text-color); /* Light Gray Text */
+        font-weight: bold; /* Makes text bold */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    .vertical-tab-nav-item.is-active:hover, .vertical-tab-nav-item.is-active:focus {
+        background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+        color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    body:not(.is-phone) .vertical-tab-nav-item.is-active {
+      --background-modifier-hover: var(--button-hover-bg-color); /* More specific variable for hover */
+      --icon-color: var(--button-text-color);
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    body:not(.is-phone) .vertical-tab-nav-item.is-active:hover,
+    body:not(.is-phone) .vertical-tab-nav-item.is-active:focus {
+      background-color: var(--button-hover-bg-color);
+      color: var(--button-text-color);
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+    .checkbox-container.is-enabled {
+      background-color: var(--button-bg-color); /* Gray-Black Background */
+      color: var(--button-text-color); /* Light Gray Text */
+  }
+
+  .checkbox-container.is-enabled:hover, .checkbox-container.is-enabled:focus {
+      background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+      color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+  }
+
+  .flair.mod-pop {
+    background-color: var(--button-bg-color); /* Gray-Black Background */
+    color: var(--button-text-color); /* Light Gray Text */
 }
 
-.vertical-tab-nav-item.is-active:hover, button.mod-cta:hover,
-.vertical-tab-nav-item.is-active:focus, button.mod-cta:focus {
+.flair.mod-pop:hover, .flair.mod-pop:focus {
     background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
     color: var(--button-text-color); /* Keeps the default light gray text color on hover */
 }
-#+END_SRC
 
+#+END_SRC
