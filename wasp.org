@@ -1,7 +1,6 @@
 # -*- org-confirm-babel-evaluate: nil -*-
   #+title: Obsidian theme Wasp
- #+PROPERTY: header-args:css :tangle C:\Users\santi\Documents\SY Notes\Obsidian\santi-2024\.obsidian\snippets\Wasp.css :exports code :noweb yes
- 
+ #+PROPERTY: header-args:css :tangle C:\Users\santi\Documents\SY Notes\Obsidian\santi-2024\.obsidian\snippets\obsidian.css :exports code :noweb yes
 
 * Info
    #+BEGIN_SRC css
@@ -387,3 +386,34 @@ border-radius: 0px 0px 0px 0px!important;
 }
 
 #+END_SRC
+
+** Horizontal Line with Bee Emoji
+there was a cool BEE icon from a pull request, it's cool, but some might not like it so I kept the PR but removed the bee icon the line does look cool 2024-08-29
+#+BEGIN_SRC css
+/** hr styles -- PREVIEW MODE */
+.cm-line hr,
+.markdown-preview-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 0;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
+}
+
+.cm-line hr::after,
+.markdown-preview-view hr::after {
+  /* content: '\1f41d'; */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--text-sub-accent);
+  background-color: var(--background-primary);
+}
+#+END_SRC
+

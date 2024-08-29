@@ -294,3 +294,29 @@ button.mod-cta {
     background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
     color: var(--button-text-color); /* Keeps the default light gray text color on hover */
 }
+
+/** hr styles -- PREVIEW MODE */
+.cm-line hr,
+.markdown-preview-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 0;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
+}
+
+.cm-line hr::after,
+.markdown-preview-view hr::after {
+  /* content: '\1f41d'; */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--text-sub-accent);
+  background-color: var(--background-primary);
+}
