@@ -53,12 +53,14 @@ body {
 	--background-primary-alt: #EDEDED;
 	--background-secondary-alt: #707070; /* ← ↓  corner */
 	--text-normal: #1A2023;
-	--text-faint: #DEDEDE;
+	--text-faint: #5c5348;
+	--text-muted: #4a4540;
 	--text-title-h1: #D49335;
 	--text-title-h2: #D49335;
 	--text-title-h3: #D49335;
 	--text-title-h4: #D49335;
 	--text-title-h5: #D49335;
+	--text-title-h6: #D49335;
 	--text-link: #D49335;
 	--text-a-hover: #D49335;
 	--text-accent-hover: #D49335;
@@ -76,6 +78,38 @@ body {
 	--vim-cursor: #961327;
 	--text-selection: #EDC180;
 	--text-white: #ffffff;
+	--tab-text-color: #3d3834;
+	--tab-text-color-focused: var(--text-normal);
+	--tab-text-color-active: var(--text-normal);
+	--tab-text-color-focused-active: var(--text-normal);
+	--list-marker-color: var(--text-muted);
+	--indentation-guide-color: #9a9288;
+	--callout-title-color: var(--text-normal);
+}
+
+/* Light mode: readable inactive tabs and editor syntax (callouts, quotes, etc.) */
+.theme-light .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title {
+	color: var(--tab-text-color);
+	opacity: 1;
+}
+
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+	color: var(--tab-text-color-active);
+}
+
+.theme-light .cm-s-obsidian span.cm-formatting,
+.theme-light .cm-s-obsidian span.cm-formatting-quote,
+.theme-light .cm-s-obsidian span.cm-hmd-callout,
+.theme-light .cm-s-obsidian span.cm-quote {
+	color: var(--text-muted);
+}
+
+.theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-formatting,
+.theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-formatting-quote,
+.theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-callout,
+.theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-quote {
+	color: var(--text-muted);
+	opacity: 1;
 }
 
 .nav-file-title,
@@ -83,12 +117,27 @@ body {
 	color: var(--text-normal);
 }
 
-.nav-file-title.is-active,
-.nav-folder-title.is-active,
-body:not(.is-grabbing) .nav-file-title:hover,
-body:not(.is-grabbing) .nav-folder-title:hover {
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active,
+.theme-dark body:not(.is-grabbing) .nav-file-title:hover,
+.theme-dark body:not(.is-grabbing) .nav-folder-title:hover {
 	background-color: var(--background-modifier-border);
-	color: white;
+	color: #1A2023;
+}
+
+.theme-dark .nav-file-title.is-active .nav-file-title-content,
+.theme-dark .nav-folder-title.is-active .nav-folder-title-content,
+.theme-dark body:not(.is-grabbing) .nav-file-title:hover .nav-file-title-content,
+.theme-dark body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-title-content {
+	color: #1A2023;
+}
+
+.theme-light .nav-file-title.is-active,
+.theme-light .nav-folder-title.is-active,
+.theme-light body:not(.is-grabbing) .nav-file-title:hover,
+.theme-light body:not(.is-grabbing) .nav-folder-title:hover {
+	background-color: var(--background-modifier-border);
+	color: #1A2023;
 }
 
 .cm-s-obsidian span.cm-formatting-link {
