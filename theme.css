@@ -56,7 +56,7 @@ body {
 	--pre-code: #3D3D3D;
 	--interactive-accent: #f8c537;
 	--interactive-accent-rgb: 248, 197, 55;
-	--interactive-before: #7c6f64;
+	--interactive-before: #9a9284;
 	--vim-cursor: #f8c537;
 
 	/* Graph view */
@@ -96,8 +96,8 @@ body {
 	--text-faint: #6B5E4F;
 	--text-muted: #5C5044;
 	--h1-color: #9A4E12;
-	--h2-color: #A85C18;
-	--h3-color: #B86A1E;
+	--h2-color: #924e14;
+	--h3-color: #8f5514;
 	--h4-color: #8F4F14;
 	--h5-color: #7A4310;
 	--h6-color: #6B3A0E;
@@ -107,11 +107,11 @@ body {
 	--text-title-h4: var(--h4-color);
 	--text-title-h5: var(--h5-color);
 	--text-title-h6: var(--h6-color);
-	--text-link: #A84820;
+	--text-link: #9b4218;
 	--text-a: #9B3A1A;
-	--text-a-hover: #C87628;
-	--text-accent: #B85C1A;
-	--text-accent-hover: #C87628;
+	--text-a-hover: #9b4218;
+	--text-accent: #9B3A1A;
+	--text-accent-hover: #9b4218;
 	--text-on-accent: #1F1A14;
 	--text-selection: #E4C07A;
 	--text-highlight-bg: #F0E0B8;
@@ -121,7 +121,7 @@ body {
 	--pre-code: #EDE6DA;
 	--interactive-accent: #D4922A;
 	--interactive-accent-rgb: 212, 146, 42;
-	--interactive-before: #8B7355;
+	--interactive-before: #6b5e4f;
 	--vim-cursor: #9B3A1A;
 
 	--graph-node: rgb(var(--interactive-accent-rgb));
@@ -151,7 +151,7 @@ body {
 	--tab-font-weight-active: 600;
 
 	--list-marker-color: var(--text-muted);
-	--indentation-guide-color: #B8A898;
+	--indentation-guide-color: #6b5e4f;
 
 	--button-bg-color: #C87628;
 	--button-text-color: #1F1A14;
