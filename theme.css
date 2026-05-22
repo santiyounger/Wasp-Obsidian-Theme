@@ -1,20 +1,22 @@
-/* This Theme is called "Wasp" and Obsidian Theme created by Santi Younger */
+/* Wasp — Obsidian theme by Santi Younger */
 
+/* Shared (both color schemes) — per Obsidian "Build a theme" guidance */
 body {
 	--font-monospace: "Source Code Pro", monospace;
 }
 
+/* ── Dark palette ─────────────────────────────────────────────────────────── */
 .theme-dark {
-	--button-hover-bg-color: #DAA520; /* Darker Yellow Background for Hover */
-	--button-hover-text-color: #ffffff; /* White Text for Hover */
-	--button-bg-color: #D49335; /* Gray-Black Background */
-	--button-text-color: #242424; /* Light Gray Text */
 	--background-primary: #242424;
 	--background-primary-alt: #242424;
 	--background-secondary: #191919;
 	--background-secondary-alt: #3D3D3D;
+	--background-modifier-border: #f8c537;
+	--background-modifier-hover: rgba(255, 255, 255, 0.06);
+
 	--text-normal: #faf2d6;
 	--text-faint: #bdae93;
+	--text-muted: #bdae93;
 	--text-title-h1: #E0E0E0;
 	--text-title-h2: #E0E0E0;
 	--text-title-h3: #E0E0E0;
@@ -23,88 +25,192 @@ body {
 	--text-title-h6: #E0E0E0;
 	--text-highlight-bg: #640211;
 	--text-link: #83a598;
+	--text-a: #f8c537;
 	--text-a-hover: #83a598;
+	--text-accent: #f8c537;
 	--text-accent-hover: #D49335;
-	/* ^^^ added for hover over bracket internal links */
+	--text-on-accent: #1A2023;
+	--text-selection: #f8c537;
+
 	--inline-code: #83a598;
 	--code-block: #83a598;
-	--text-a: #f8c537;
-	--interactive-accent: #f8c537;
-	--text-accent: #f8c537;
-	--text-on-accent: #fff;
-	--interactive-accent-rgb: 248, 197, 55;
-	--vim-cursor: #f8c537;
-	/*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
 	--pre-code: #3D3D3D;
+	--interactive-accent: #f8c537;
+	--interactive-accent-rgb: 248, 197, 55;
 	--interactive-before: #7c6f64;
-	--background-modifier-border: #f8c537;
-	--text-selection: #f8c537;
+	--vim-cursor: #f8c537;
+
+	--callout-title-color: var(--text-normal);
+
+	/* File tree — hover subtle; active = darker amber + white text (not bright gold) */
+	--wasp-nav-active-background: #7A5C14;
+	--nav-item-background-hover: var(--background-modifier-hover);
+	--nav-item-background-active: var(--wasp-nav-active-background);
+	--nav-item-color-hover: var(--text-normal);
+	--nav-item-color-active: #ffffff;
+	--nav-collapse-icon-color: var(--text-faint);
+	--nav-collapse-icon-color-collapsed: var(--text-faint);
+
+	/* Wasp-specific UI (settings buttons, etc.) */
+	--button-bg-color: #D49335;
+	--button-text-color: #242424;
+	--button-hover-bg-color: #DAA520;
+	--button-hover-text-color: #ffffff;
 }
 
+/* ── Light palette ────────────────────────────────────────────────────────── */
+.theme-light {
+	--background-primary: #FAF6F0;
+	--background-primary-alt: #FFFCF7;
+	--background-secondary: #E8DFD0;
+	--background-secondary-alt: #C9B8A8;
+	--background-modifier-border: #C87628;
+	--background-modifier-hover: rgba(120, 72, 24, 0.08);
+
+	--text-normal: #2C2419;
+	--text-faint: #6B5E4F;
+	--text-muted: #5C5044;
+	--text-title-h1: #9A4E12;
+	--text-title-h2: #A85C18;
+	--text-title-h3: #B86A1E;
+	--text-title-h4: #8F4F14;
+	--text-title-h5: #7A4310;
+	--text-title-h6: #6B3A0E;
+	--text-link: #A84820;
+	--text-a: #9B3A1A;
+	--text-a-hover: #C87628;
+	--text-accent: #B85C1A;
+	--text-accent-hover: #C87628;
+	--text-on-accent: #1F1A14;
+	--text-selection: #E4C07A;
+	--text-highlight-bg: #F0E0B8;
+	--text-white: #FFFCF7;
+
+	--inline-code: #3D6B5C;
+	--pre-code: #EDE6DA;
+	--interactive-accent: #D4922A;
+	--interactive-accent-rgb: 212, 146, 42;
+	--interactive-before: #8B7355;
+	--vim-cursor: #9B3A1A;
+
+	--callout-title-color: var(--text-normal);
+
+	--nav-item-background-hover: var(--background-modifier-hover);
+	--nav-item-background-active: var(--background-modifier-border);
+	--nav-item-color-hover: var(--text-normal);
+	--nav-item-color-active: var(--text-on-accent);
+
+	/* Workspace tabs — clear bar vs active pane */
+	--tab-container-background: #E8DFD0;
+	--tab-background-active: var(--background-primary);
+	--tab-text-color: #5C5044;
+	--tab-text-color-active: #1F1A14;
+	--tab-text-color-focused: #5C5044;
+	--tab-text-color-focused-active: #1F1A14;
+	--tab-text-color-focused-highlighted: #1F1A14;
+	--tab-text-color-focused-active-current: #1F1A14;
+	--tab-divider-color: #C9B8A8;
+	--tab-outline-color: #C87628;
+	--tab-font-weight: 500;
+	--tab-font-weight-active: 600;
+
+	--list-marker-color: var(--text-muted);
+	--indentation-guide-color: #B8A898;
+
+	--button-bg-color: #C87628;
+	--button-text-color: #1F1A14;
+	--button-hover-bg-color: #A85C18;
+	--button-hover-text-color: #FFFCF7;
+}
+
+/* Dark: active file row — ensure white label/icons on darker amber bar */
+.theme-dark .tree-item-self.nav-file-title.is-active,
+.theme-dark .tree-item-self.nav-folder-title.is-active {
+	--icon-color: var(--nav-item-color-active);
+}
+
+.theme-dark .tree-item-self.nav-file-title.is-active .tree-item-inner,
+.theme-dark .tree-item-self.nav-folder-title.is-active .tree-item-inner,
+.theme-dark .tree-item-self.nav-file-title.is-active .nav-file-title-content,
+.theme-dark .tree-item-self.nav-folder-title.is-active .nav-folder-title-content,
+.theme-dark .tree-item-self.nav-file-title.is-active .svg-icon,
+.theme-dark .tree-item-self.nav-folder-title.is-active .svg-icon,
+.theme-dark .tree-item-self.nav-file-title.is-active svg,
+.theme-dark .tree-item-self.nav-folder-title.is-active svg {
+	color: var(--nav-item-color-active);
+	stroke: var(--nav-item-color-active);
+}
+
+/* ── Dark: selection & search (gold highlight needs dark foreground) ───── */
 .theme-dark .cm-s-obsidian span.obsidian-search-match-highlight {
 	color: var(--text-normal);
 	background-color: #483699;
 }
 
-.theme-light {
-	--background-primary: #EDEDED;
-	--background-secondary: #C4C4C4;
-	/* thick menu border */
-	--background-primary-alt: #EDEDED;
-	--background-secondary-alt: #707070; /* ← ↓  corner */
-	--text-normal: #1A2023;
-	--text-faint: #5c5348;
-	--text-muted: #4a4540;
-	--text-title-h1: #D49335;
-	--text-title-h2: #D49335;
-	--text-title-h3: #D49335;
-	--text-title-h4: #D49335;
-	--text-title-h5: #D49335;
-	--text-title-h6: #D49335;
-	--text-link: #D49335;
-	--text-a-hover: #D49335;
-	--text-accent-hover: #D49335;
-	/* ^^^ added for hover over bracket internal links */
-	--inline-code: #458588;
-	/*  --text-mark:                  add if needed */
-	--pre-code: #bebebe;
-	/*  --text-highlight-bg:          add if needed */
-	--interactive-before: #a89984;
-	--background-modifier-border: #D49335;
-	--text-a: #961327;
-	--interactive-accent: #f8c537;
-	--text-accent: #961327;
-	--interactive-accent-rgb: 150, 19, 39;
-	--vim-cursor: #961327;
-	--text-selection: #EDC180;
-	--text-white: #ffffff;
-	--tab-text-color: #3d3834;
-	--tab-text-color-focused: var(--text-normal);
-	--tab-text-color-active: var(--text-normal);
-	--tab-text-color-focused-active: var(--text-normal);
-	--list-marker-color: var(--text-muted);
-	--indentation-guide-color: #9a9288;
-	--callout-title-color: var(--text-normal);
+.theme-dark ::selection,
+.theme-dark .markdown-preview-view ::selection,
+.theme-dark .markdown-rendered ::selection,
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor .cm-line ::selection,
+.theme-dark .cm-editor .cm-line ::selection {
+	background-color: var(--text-selection);
+	color: var(--text-on-accent);
 }
 
-/* Light mode: readable inactive tabs and editor syntax (callouts, quotes, etc.) */
-.theme-light .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title {
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor .cm-selectionMatchBackground,
+.theme-dark .cm-editor .cm-selectionBackground,
+.theme-dark .cm-editor .cm-selectionMatchBackground {
+	background-color: var(--text-selection);
+}
+
+.theme-dark .cm-editor .cm-selection {
+	color: var(--text-on-accent);
+}
+
+/* ── Light: selection, tabs, editor syntax ──────────────────────────────── */
+.theme-light ::selection,
+.theme-light .markdown-preview-view ::selection,
+.theme-light .markdown-rendered ::selection,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor .cm-line ::selection,
+.theme-light .cm-editor .cm-line ::selection {
+	background-color: var(--text-selection);
+	color: var(--text-on-accent);
+}
+
+.theme-light .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor .cm-selectionMatchBackground,
+.theme-light .cm-editor .cm-selectionBackground,
+.theme-light .cm-editor .cm-selectionMatchBackground {
+	background-color: var(--text-selection);
+}
+
+.theme-light .cm-editor .cm-selection {
+	color: var(--text-on-accent);
+}
+
+/* Light: workspace tab chrome (icons + titles follow tab variables) */
+.theme-light .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title,
+.theme-light .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-icon {
 	color: var(--tab-text-color);
 	opacity: 1;
 }
 
-.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title {
-	color: var(--tab-text-color-active);
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-status-icon {
+	color: var(--tab-text-color-focused-active);
 }
 
-.theme-light .cm-s-obsidian span.cm-formatting,
+.theme-light .workspace-tab-header.is-active .svg-icon,
+.theme-light .workspace-tab-header.is-active svg {
+	color: var(--tab-text-color-focused-active);
+	stroke: var(--tab-text-color-focused-active);
+}
+
+/* Light: faint editor markers — quotes/callouts only (not bold/italic) */
 .theme-light .cm-s-obsidian span.cm-formatting-quote,
 .theme-light .cm-s-obsidian span.cm-hmd-callout,
-.theme-light .cm-s-obsidian span.cm-quote {
-	color: var(--text-muted);
-}
-
-.theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-formatting,
+.theme-light .cm-s-obsidian span.cm-quote,
 .theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-formatting-quote,
 .theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-hmd-callout,
 .theme-light .cm-s-obsidian .cm-line:not(.cm-active) span.cm-quote {
@@ -112,34 +218,60 @@ body {
 	opacity: 1;
 }
 
-.nav-file-title,
-.nav-folder-title {
-	color: var(--text-normal);
+/* ── Headings ───────────────────────────────────────────────────────────── */
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+	font-size: 18px;
 }
 
-.theme-dark .nav-file-title.is-active,
-.theme-dark .nav-folder-title.is-active,
-.theme-dark body:not(.is-grabbing) .nav-file-title:hover,
-.theme-dark body:not(.is-grabbing) .nav-folder-title:hover {
-	background-color: var(--background-modifier-border);
-	color: #1A2023;
+.cm-header-1 { color: var(--text-title-h1) !important; }
+.cm-header-2 { color: var(--text-title-h2) !important; }
+.cm-header-3 { color: var(--text-title-h3) !important; }
+.cm-header-4 { color: var(--text-title-h4) !important; }
+.cm-header-5 { color: var(--text-title-h5) !important; }
+.cm-header-6 { color: var(--text-title-h6) !important; }
+
+.markdown-preview-section h1,
+.markdown-preview-section h2,
+.markdown-preview-section h3,
+.markdown-preview-section h4,
+.markdown-preview-section h5,
+.markdown-preview-section h6,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+	font-size: 20px;
+	line-height: 24px;
 }
 
-.theme-dark .nav-file-title.is-active .nav-file-title-content,
-.theme-dark .nav-folder-title.is-active .nav-folder-title-content,
-.theme-dark body:not(.is-grabbing) .nav-file-title:hover .nav-file-title-content,
-.theme-dark body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-title-content {
-	color: #1A2023;
+.markdown-preview-section h1,
+.markdown-preview-view h1 { color: var(--text-title-h1) !important; }
+.markdown-preview-section h2,
+.markdown-preview-view h2 { color: var(--text-title-h2) !important; }
+.markdown-preview-section h3,
+.markdown-preview-view h3 { color: var(--text-title-h3) !important; }
+.markdown-preview-section h4,
+.markdown-preview-view h4 { color: var(--text-title-h4) !important; }
+.markdown-preview-section h5,
+.markdown-preview-view h5 { color: var(--text-title-h5) !important; }
+.markdown-preview-section h6,
+.markdown-preview-view h6 { color: var(--text-title-h6) !important; }
+
+/* ── Graph view ─────────────────────────────────────────────────────────── */
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+	color: rgb(var(--interactive-accent-rgb)) !important;
 }
 
-.theme-light .nav-file-title.is-active,
-.theme-light .nav-folder-title.is-active,
-.theme-light body:not(.is-grabbing) .nav-file-title:hover,
-.theme-light body:not(.is-grabbing) .nav-folder-title:hover {
-	background-color: var(--background-modifier-border);
-	color: #1A2023;
-}
-
+/* ── Misc editor / UI ───────────────────────────────────────────────────── */
 .cm-s-obsidian span.cm-formatting-link {
 	color: var(--text-normal);
 }
@@ -148,91 +280,8 @@ body {
 	color: var(--text-normal) !important;
 }
 
-button.mod-cta {
-	background-color: var(--interactive-accent);
-	color: var(--text-normal);
-}
-
-.vertical-tab-header-group-title {
+.theme-light .vertical-tab-header-group-title {
 	color: var(--text-white);
-}
-
-.cm-header-1 {
-	font-size: 18px;
-	color: var(--text-title-h1) !important;
-}
-
-.cm-header-2 {
-	font-size: 18px;
-	color: var(--text-title-h2) !important;
-}
-
-.cm-header-3 {
-	font-size: 18px;
-	color: var(--text-title-h3) !important;
-}
-
-.cm-header-4 {
-	font-size: 18px;
-	color: var(--text-title-h4) !important;
-}
-
-.cm-header-5 {
-	font-size: 18px;
-	color: var(--text-title-h5) !important;
-}
-
-.cm-header-6 {
-	font-size: 18px;
-	color: var(--text-title-h6) !important;
-}
-
-.markdown-preview-section h1,
-.markdown-preview-view h1 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h1) !important;
-}
-
-.markdown-preview-section h2,
-.markdown-preview-view h2 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h2) !important;
-}
-
-.markdown-preview-section h3,
-.markdown-preview-view h3 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h3) !important;
-}
-
-.markdown-preview-section h4,
-.markdown-preview-view h4 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h4) !important;
-}
-
-.markdown-preview-section h5,
-.markdown-preview-view h5 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h5) !important;
-}
-
-.markdown-preview-section h6,
-.markdown-preview-view h6 {
-	font-size: 20px;
-	line-height: 24px;
-	color: var(--text-title-h6) !important;
-}
-
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight {
-	color: rgb(var(--interactive-accent-rgb)) !important;
 }
 
 /*-----------------------------------------*/
@@ -243,7 +292,7 @@ button.mod-cta {
 }
 
 .cm-fat-cursor .CodeMirror-cursor {
-	background-color: #f8c537 !important;
+	background-color: var(--vim-cursor) !important;
 	opacity: 80% !important;
 	width: 9px !important;
 	visibility: visible !important;
@@ -296,70 +345,69 @@ button.mod-cta {
 }
 
 button.mod-cta {
-	background-color: var(--button-bg-color); /* Uses variable for background color */
-	color: var(--button-text-color); /* Uses variable for text color */
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+	font-weight: 600;
 }
 
 button.mod-cta:hover,
 button.mod-cta:focus {
-	background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
-	color: var(--button-text-color); /* Keeps the default light gray text color on hover */
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	background-color: var(--button-hover-bg-color);
+	color: var(--button-text-color);
+	font-weight: 600;
 }
 
 .vertical-tab-nav-item.is-active {
-	background-color: var(--button-bg-color); /* Gray-Black Background */
-	color: var(--button-text-color); /* Light Gray Text */
-	font-weight: bold; /* Makes text bold */
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+	font-weight: 600;
 }
 
 .vertical-tab-nav-item.is-active:hover,
 .vertical-tab-nav-item.is-active:focus {
-	background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
-	color: var(--button-text-color); /* Keeps the default light gray text color on hover */
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	background-color: var(--button-hover-bg-color);
+	color: var(--button-text-color);
+	font-weight: 600;
 }
 
 body:not(.is-phone) .vertical-tab-nav-item.is-active {
-	--background-modifier-hover: var(--button-hover-bg-color); /* More specific variable for hover */
+	--background-modifier-hover: var(--button-hover-bg-color);
 	--icon-color: var(--button-text-color);
 	background-color: var(--button-bg-color);
 	color: var(--button-text-color);
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	font-weight: 600;
 }
 
 body:not(.is-phone) .vertical-tab-nav-item.is-active:hover,
 body:not(.is-phone) .vertical-tab-nav-item.is-active:focus {
 	background-color: var(--button-hover-bg-color);
 	color: var(--button-text-color);
-	font-weight: 600; /* Makes text bold but less than standard bold */
+	font-weight: 600;
 }
 
 .checkbox-container.is-enabled {
-	background-color: var(--button-bg-color); /* Gray-Black Background */
-	color: var(--button-text-color); /* Light Gray Text */
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
 }
 
 .checkbox-container.is-enabled:hover,
 .checkbox-container.is-enabled:focus {
-	background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
-	color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+	background-color: var(--button-hover-bg-color);
+	color: var(--button-text-color);
 }
 
 .flair.mod-pop {
-	background-color: var(--button-bg-color); /* Gray-Black Background */
-	color: var(--button-text-color); /* Light Gray Text */
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
 }
 
 .flair.mod-pop:hover,
 .flair.mod-pop:focus {
-	background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
-	color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+	background-color: var(--button-hover-bg-color);
+	color: var(--button-text-color);
 }
 
-/** hr styles -- PREVIEW MODE */
+/** hr styles — PREVIEW MODE */
 .cm-line hr,
 .markdown-preview-view hr {
 	margin-block-start: 4em;
@@ -374,7 +422,6 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active:focus {
 
 .cm-line hr::after,
 .markdown-preview-view hr::after {
-	/* content: '\1f41d'; */
 	display: inline-block;
 	position: absolute;
 	left: 50%;
