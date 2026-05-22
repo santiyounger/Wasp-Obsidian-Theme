@@ -15,4 +15,4 @@ Light cream backgrounds with amber accents.
 
 **Wasp** by Santi Younger.
 
-Free to use, just leave me a comment in one of my latest [YouTube videos](https://www.youtube.com/@SantiYounger/videos) letting me know you use this Wasp theme, or shot me [an email](https://www.santiyounger.com/contact)
+Free to use, just leave me a comment in one of my latest [YouTube videos](https://www.youtube.com/@SantiYounger/videos) letting me know you use my Wasp theme, or shoot me [an email](https://www.santiyounger.com/contact)
