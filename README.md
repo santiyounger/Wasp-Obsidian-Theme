@@ -1,3 +1,5 @@
+A dark/light Obsidian theme with yellow and amber accents.
+
 ## Dark mode
 ![Wasp dark mode](img/wasp-dark.png)
 Dark backgrounds with yellow accents.
@@ -5,6 +7,10 @@ Dark backgrounds with yellow accents.
 ## Light mode
 ![Wasp light mode](img/wasp-light.png)
 Light cream backgrounds with amber accents.
+
+## Install and Use
+
+**Settings → Appearance → Themes → Manage** → search **Wasp** → **Install** → select **Wasp** as your theme.
 
 ## License
 
