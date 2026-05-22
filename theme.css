@@ -59,6 +59,12 @@ body {
 	--interactive-before: #7c6f64;
 	--vim-cursor: #f8c537;
 
+	/* Graph view */
+	--graph-node: rgb(var(--interactive-accent-rgb));
+	--graph-line: rgb(var(--interactive-accent-rgb));
+	--graph-node-focused: rgb(var(--interactive-accent-rgb));
+	--graph-text: var(--text-normal);
+
 	--callout-title-color: var(--text-normal);
 
 	/* File tree — hover subtle; active = darker amber + white text (not bright gold) */
@@ -117,6 +123,11 @@ body {
 	--interactive-accent-rgb: 212, 146, 42;
 	--interactive-before: #8B7355;
 	--vim-cursor: #9B3A1A;
+
+	--graph-node: rgb(var(--interactive-accent-rgb));
+	--graph-line: rgb(var(--interactive-accent-rgb));
+	--graph-node-focused: rgb(var(--interactive-accent-rgb));
+	--graph-text: var(--text-normal);
 
 	--callout-title-color: var(--text-normal);
 
@@ -245,11 +256,14 @@ body {
 
 /* Headings: sizes/weights on body, colors on .theme-* — Obsidian applies them in reading + edit (#10) */
 
-/* ── Graph view ─────────────────────────────────────────────────────────── */
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight {
-	color: rgb(var(--interactive-accent-rgb)) !important;
+/* Graph view highlights (WebGL bridge) */
+.theme-dark .graph-view.color-circle,
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-line-highlight,
+.theme-light .graph-view.color-circle,
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-line-highlight {
+	color: rgb(var(--interactive-accent-rgb));
 }
 
 /* ── Misc editor / UI ───────────────────────────────────────────────────── */
@@ -257,8 +271,8 @@ body {
 	color: var(--text-normal);
 }
 
-.CodeMirror-guttermarker-subtle {
-	color: var(--text-normal) !important;
+body .markdown-source-view .CodeMirror-guttermarker-subtle {
+	color: var(--text-normal);
 }
 
 .theme-light .vertical-tab-header-group-title {
@@ -272,57 +286,11 @@ body {
 	font-family: var(--font-monospace);
 }
 
-.cm-fat-cursor .CodeMirror-cursor {
-	background-color: var(--vim-cursor) !important;
-	opacity: 80% !important;
-	width: 9px !important;
-	visibility: visible !important;
-}
-
-.plugin-tabs .stayopen .view-header {
-	border-bottom: 2px solid var(--interactive-accent) !important;
-}
-
-.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf:not(.stayopen) > .workspace-leaf-content > .view-header .view-header-title::before {
-	background-color: transparent !important;
-}
-
-.plugin-tabs .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
-.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen) {
-	border-radius: 5px 5px 0px 0px !important;
-}
-
-.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf {
-	border-color: var(--background-secondary-alt) !important;
-	border-bottom-width: 0px !important;
-	border-right-width: 0px !important;
-}
-
-.theme-light.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf {
-	border-color: var(--background-secondary-alt) !important;
-	border-left-width: 3px !important;
-	border-bottom-width: 0px !important;
-	border-right-width: 0px !important;
-}
-
-.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf hr.workspace-leaf-resize-handle,
-.plugin-tabs .mod-root.workspace-split.mod-vertical > .mod-vertical hr.workspace-leaf-resize-handle {
-	display: none;
-}
-
-.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf .view-header {
-	border-left-color: transparent !important;
-}
-
-.plugin-tabs .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
-.plugin-tabs .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
-	border-radius: 0px !important;
-}
-
-.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
-.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
-	border: 0 !important;
-	border-radius: 0px 0px 0px 0px !important;
+body .cm-fat-cursor .CodeMirror-cursor {
+	background-color: var(--vim-cursor);
+	opacity: 0.8;
+	width: 9px;
+	visibility: visible;
 }
 
 button.mod-cta {
