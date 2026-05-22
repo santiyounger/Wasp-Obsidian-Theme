@@ -1,0 +1,8 @@
+{
+	"name": "wasp-obsidian-theme",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"version": "node version-bump.mjs && git add manifest.json versions.json"
+	}
+}
