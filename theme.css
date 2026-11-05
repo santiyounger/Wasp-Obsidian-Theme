@@ -208,6 +208,13 @@ body {
 	stroke: var(--nav-item-color-active);
 }
 
+/* Search pane: Obsidian colors expanded result titles with --nav-item-color-active,
+   which Hive sets to on-accent text for the active file row. Search titles have no
+   accent background, so use the normal text color. */
+body .search-result:not(.is-collapsed) .search-result-file-title {
+	color: var(--text-normal);
+}
+
 /* ── Dark: search (gold highlight needs dark foreground) ────────────────── */
 .theme-dark .cm-s-obsidian span.obsidian-search-match-highlight {
 	color: var(--text-normal);
